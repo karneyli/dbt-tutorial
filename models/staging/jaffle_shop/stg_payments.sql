@@ -8,3 +8,5 @@ select
     created as created_at
     
 from `dbt-tutorial.stripe.payment`
+
+
