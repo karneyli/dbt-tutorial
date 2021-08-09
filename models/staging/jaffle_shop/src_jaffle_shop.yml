@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: jaffle_shop # are you sure you want to name it this? usually we name things after the data source, like 'stripe', or 'saleforce'
+    database: dbt-tutorial
+    schema: jaffle_shop
+    tables: 
+      # dbt-tutorial.jaffle_shop.customers
+      # dbt-tutorial.jaffle_shop.orders
+      - name: customers 
+      - name: orders
+  - name: stripe
+    database: dbt-tutorial
+    schema: stripe
+    tables:
+      # dbt-tutorial.stripe.payment
+      - name: payment
