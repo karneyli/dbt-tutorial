@@ -15,16 +15,17 @@ models:
           - unique
           - not_null
       - name: status
-        description: '{{ doc("order_status") }}'
+        description: "{{ doc('order_status') }}"
         tests: 
           - accepted_values: 
               values: 
-                - 'returned'
-                - 'completed'
-                - 'shipped'
-                - 'placed'
-                - 'return_pending'
+                - returned
+                - completed
+                - shipped
+                - placed
+                - return_pending
       - name: customer_id
+        description: Foreign key to stg_customers.customer_id
         tests:
           - not_null d
           - relationships:
